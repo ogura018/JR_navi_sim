@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://memo0618.jp/jr_navi_sim/css/ress.min.css">
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://memo0618.jp/jr_navi_sim/css/style.css">
+
+
+	<title>Document</title>
+
+
+</head>
+
+<body>
+	<header>
+		<h1 style="padding-top: 20px;">JR西日本 運転支援端末シミュレーター</h1>
+	</header>
+	<main>
+		<!-- メインボタン群 -->
+		<div class="main-area">
+			<button id="main_img1">
+			</button>
+		</div>
+		<!-- メインボタン群ここまで -->
+		<div class="menu_type">
+			<div id="menu_close">
+				<button id="close"><i class="fas fa-times"></i>閉じる</button>
+			</div>
+			<div class="menu_lists">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_futsuu.png" alt="普通" id="m1">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_kaisoku.png" alt="快速" id="m2">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_kankuu.png" alt="関空快速" id="m3">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_shinkaisoku.png" alt="新快速" id="m4">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_tanbaji.png" alt="丹波路快速" id="m5">
+				<img src="https://memo0618.jp/jr_navi_sim/images/img_tokkyuu.png" alt="特急" id="m6">
+			</div>
+		</div>
+	</main>
+	<footer>
+		<section class="copy">
+			<p>&copy; 2021 RAY</p>
+		</section>
+	</footer>
+
+</body>
+<script>
+	let now = 1;
+	const BTN_MAIN_CLOSE = document.querySelector('#close');
+	const MENU_ITEMS = document.querySelector(".menu_type");
+	const MAIN = document.querySelector('#main_img1');
+
+	// メインボタンクリックでメニュー表示
+	MAIN.addEventListener('click', () => {
+		MENU_ITEMS.style.display = "inline-block";
+	});
+
+	// メニュー
+	document.querySelector("#m1").addEventListener("click", () => {
+		now = 1;
+		if (now == 1) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_futsuu.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	document.querySelector("#m2").addEventListener("click", () => {
+
+		now = 2;
+		if (now == 2) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_kaisoku.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	document.querySelector("#m3").addEventListener("click", () => {
+		now = 3;
+		if (now == 3) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_kankuu.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	document.querySelector("#m4").addEventListener("click", () => {
+		now = 4;
+		if (now == 4) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_shinkaisoku.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	document.querySelector("#m5").addEventListener("click", () => {
+		now = 5;
+		if (now == 5) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_tanbaji.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	document.querySelector("#m6").addEventListener("click", () => {
+		now = 6;
+		if (now == 6) {
+			MAIN.style.backgroundImage = `url(https://memo0618.jp/jr_navi_sim/images/img_tokkyuu.png)`;
+			MENU_ITEMS.style.display = "none";
+		};
+	});
+
+	//閉じる
+	BTN_MAIN_CLOSE.addEventListener('click', () => {
+		document.querySelector('.menu_type').style.display = 'none';
+	});
+</script>
+
+</html>

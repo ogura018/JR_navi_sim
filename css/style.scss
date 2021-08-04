@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/*共通部分*/
+
+body {
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ",
+		Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+	text-align: center;
+}
+
+/*共通部分ここまで*/
+
+/*ヘッダー*/
+header{
+	background-color: #dff;
+	width: max-content;
+	height: max-content;
+}
+
+
+/*ヘッダーここまで*/
+
+/*メイン*/
+main {
+	text-align: center;
+	display: inline-block;
+}
+.main-area {
+	position: relative;
+	width: 1000px;
+	max-width: 1000px;
+	height: 700px;
+	max-height: 700px;
+	background-image: url(https://memo0618.jp/jr_navi_sim/images/pic_main_bg.jpg);
+	background-size: cover;
+}
+
+main > .type {
+	margin-top: 50px;
+	width: 500px;
+	height: 100px;
+	background-color: rgb(28, 40, 40);
+}
+
+.main-area img {
+	width: 40%;
+	position: absolute;
+	left: 15%;
+	top: 30%;
+}
+.main-area img:hover {
+	cursor: pointer;
+}
+// メインボタン
+#main_img1 {
+	width: 410px;
+	height: 142px;
+	background-image: url(https://memo0618.jp/jr_navi_sim/images/img_futsuu.png);
+	position: absolute;
+	left: 14%;
+	top: 30%;
+}
+// メインボタンここまで
+
+#m1:hover,
+#m2:hover,
+#m3:hover,
+#m4:hover,
+#m5:hover,
+#m6:hover {
+	cursor: pointer;
+}
+
+.menu_type {
+	background-color: #fff;
+	position: relative;
+	top: -650px;
+	z-index: 1000;
+	display: none;
+	width: 250px;
+	height: 600px;
+	box-shadow: rgba($color: #000000, $alpha: 0.5) 0 0 10px;
+	border-radius: 3px;
+}
+
+.menu_type > .menu_close {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.menu_type #close {
+	font-size: 25px;
+	font-weight: bold;
+	height: fit-content;
+}
+
+.menu_type img {
+	display: inline-block;
+	width: 90%;
+}
+
+.menu_type .menu_lists {
+	margin-top: 5%;
+}
+/*メインここまで*/
+
+/*フッター*/
+footer {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+/*フッターここまで*/
+
+//以下その他
