@@ -10,12 +10,10 @@ body {
 /*共通部分ここまで*/
 
 /*ヘッダー*/
-header{
+header {
 	background-color: #dff;
-	width: max-content;
-	height: max-content;
+	padding: 10px 20px;
 }
-
 
 /*ヘッダーここまで*/
 
@@ -47,6 +45,7 @@ main > .type {
 	left: 15%;
 	top: 30%;
 }
+
 .main-area img:hover {
 	cursor: pointer;
 }
